@@ -1,5 +1,5 @@
 %define name mp3val
-%define version 0.1.6
+%define version 0.1.7
 %define release %mkrel 1
 
 Summary: Tool to validate and fix MPEG audio files
@@ -19,7 +19,7 @@ verification of MPEG 1 Layer III (MP3) files, but supports also other
 MPEG versions and layers.
 
 %prep
-%setup -q -c
+%setup -q -n %name-%version-src
 chmod 644 changelog.txt manual.html
 
 %build
