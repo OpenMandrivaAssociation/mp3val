@@ -10,6 +10,7 @@ Source0: %{name}-%{version}-src.tar.bz2
 License: GPL
 Group: Sound
 Url: http://mp3val.sourceforge.net/
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 MP3val is a small, high-speed tool for MPEG audio files validation and
