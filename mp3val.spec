@@ -1,13 +1,14 @@
 %define name mp3val
 %define version 0.1.7
-%define release %mkrel 4
+%define release %mkrel 3
 
 Summary: Tool to validate and fix MPEG audio files
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: %{name}-%{version}-src.tar.bz2
-License: GPL
+Patch: mp3val-0.1.7-src-fix-open.patch
+License: GPLv2+
 Group: Sound
 Url: http://mp3val.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -20,6 +21,7 @@ MPEG versions and layers.
 
 %prep
 %setup -q -n %name-%version-src
+%patch -p1
 chmod 644 changelog.txt manual.html
 
 %build
